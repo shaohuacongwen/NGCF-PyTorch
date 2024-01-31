@@ -17,7 +17,11 @@ def precision_at_k(r, k):
     assert k >= 1
     r = np.asarray(r)[:k]
     return np.mean(r)
-
+'''
+假设有一个推荐系统推荐了 10 个物品给用户，用户实际上对其中的物品感兴趣的情况如下：
+actual_interest = [1, 0, 1, 0, 1, 1, 0, 0, 0, 1] k=5
+前5个位置有三个真正感兴趣 所以评价结果为0.6
+'''
 
 def average_precision(r,cut):
     """Score is average precision (area under PR curve)
